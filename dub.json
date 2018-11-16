@@ -1,0 +1,9 @@
+{
+	"name": "wargames",
+	"authors": [
+		"Flying-Toast"
+	],
+	"description": "WarGames simulator.",
+	"copyright": "Copyright © 2018, Flying-Toast",
+	"license": "MIT"
+}
