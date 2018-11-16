@@ -1,3 +1,5 @@
+import wargames;
+
 void main() {
 
 }
