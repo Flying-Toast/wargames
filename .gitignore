@@ -2,6 +2,7 @@
 docs.json
 __dummy.html
 docs/
+/wargames
 wargames.so
 wargames.dylib
 wargames.dll
