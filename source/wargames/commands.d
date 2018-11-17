@@ -35,7 +35,8 @@ Command[] commands = [
 	Command("", "SHALL WE PLAY A GAME?", "play", 45),
 	Command("global thermonuclear war", "WOULDN'T YOU PREFER A GOOD GAME OF CHESS?", "chess", 45),
 	Command("later", "FINE.", "fine", 45),
-	Command(1000)
+	Command(1000),
+	Command("", "CLEARSCREEN", "", 0)
 ];
 
 void generateCommands() {

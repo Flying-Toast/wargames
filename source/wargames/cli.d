@@ -46,6 +46,10 @@ class Cli {
 			spawn(&playSound, sound);
 		}
 		writeln();
+		if (str == "CLEARSCREEN") {
+			clearScreen();
+			return;
+		}
 		foreach (i; 0 .. str.length+1) {
 			writeln("\033[1A", str[0 .. i]); //go up 1 line then print one more char than last time
 			Thread.sleep(dur!"msecs"(delay));
