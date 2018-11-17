@@ -28,27 +28,22 @@ class Cli {
 		}
 
 		clearScreen();
-		write("LOGON: ");
 
-		string line = readln().replace("\n", "").toLower;
-		while (line == "joshua" || line == "help logon" || line == "help games" || line == "list games") {
+		while (true) {
+			write("LOGON: ");
+			string line = readln().replace("\n", "").toLower;
+
 			if (line == "joshua") {
 				writeln();
 				break;
-			}
-
-			if (line == "help games") {
+			} else if (line == "help games") {
 				writeln();
 				typeText("'GAMES' REFERES TO MODELS, SIMULATIONS, AND GAMES", "helpgames", 45);
 				typeText("WHICH HAVE TACTICAL AND STRATEGIC APPLICATIONS.", "", 45);
-			}
-
-			if (line == "help logon") {
+			} else if (line == "help logon") {
 				writeln();
 				typeText("HELP NOT AVAILABLE", "nohelp", 45);
-			}
-
-			if (line == "list games") {
+			} else if (line == "list games") {
 				writeln();
 				typeText("FALKENS MAZE", "falkensmaze", 45);
 				Thread.sleep(dur!"msecs"(1500));
@@ -78,17 +73,15 @@ class Cli {
 				Thread.sleep(dur!"msecs"(1000));
 				typeText("THEATERWIDE BIOTOXIC AND CHEMICAL WARFARE", "biotoxic", 45);
 				Thread.sleep(dur!"msecs"(1300));
+				typeText("", "", 0);
 				typeText("GLOBAL THERMONUCLEAR WAR", "global", 45);
+			} else {
+				writeln();
+				typeText("IDENTIFICATION NOT RECOGNIZED BY SYSTEM", "terminated", 35);
+				typeText("--CONNECTION TERMINATED--", "", 25);
+				Thread.sleep(dur!"msecs"(1500));
+				clearScreen();
 			}
-
-			write("LOGON: ");
-			line = readln().replace("\n", "").toLower;
-		}
-		if (line != "joshua") {
-			writeln();
-			typeText("IDENTIFICATION NOT RECOGNIZED BY SYSTEM", "terminated", 35);
-			typeText("--CONNECTION TERMINATED--", "", 25);
-			return;
 		}
 
 		foreach (command; commands) {
