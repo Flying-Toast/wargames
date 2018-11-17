@@ -65,8 +65,13 @@ version(linux) {
 }
 
 version(OSX) {
-	///plays the sound at sounds/`sound`.wav
+	//plays the sound at sounds/`sound`.wav
 	private void playSound(string sound) {
 		executeShell("nohup afplay "~getcwd~"/sounds/"~sound~".wav");
 	}
+}
+
+version(Windows) {
+	//so that it still compiles on windows, even though the sound wont work
+	private void playSound(string sound) {}
 }
