@@ -60,7 +60,19 @@ void generateCommands() {
 	}
 
 	commands ~= [
-		Command("", " ".replicate(usaLines[0].length / 2 - 7)~"UNITED STATES"~" ".replicate((usaLines.length / 2) + 7 - 6 + (ussrLines[0].length/2))~"SOVIET UNION", "", 45)
+		Command("", " ".replicate(usaLines[0].length / 2 - 7)~"UNITED STATES"~" ".replicate((usaLines.length / 2) + 7 - 6 + (ussrLines[0].length/2))~"SOVIET UNION", "", 45),
+		Command("", "", "", 0),
+		Command("", "", "", 0),
+		Command("", "WHICH SIDE DO YOU WANT?", "side", 45),
+		Command("", "", "", 0),
+		Command(800),
+		Command("", "1.   UNITED STATES", "greetings", 45),
+		Command(700),
+		Command("", "2.   SOVIET UNION", "greetings", 45),
+		Command(700),
+		Command("", "", "", 0),
+		Command("", "PLEASE CHOOSE ONE:", "greetings", 45),
+		Command(700)
 	];
 }
 
