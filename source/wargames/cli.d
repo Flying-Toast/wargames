@@ -57,7 +57,16 @@ class Cli {
 	}
 }
 
-///plays the sound at 'sounds/sound.wav'
-private void playSound(string sound) {
-	executeShell("nohup aplay "~getcwd~"/sounds/"~sound~".wav");
+version(linux) {
+	///plays the sound at sounds/`sound`.wav
+	private void playSound(string sound) {
+		executeShell("nohup aplay "~getcwd~"/sounds/"~sound~".wav");
+	}
+}
+
+version(OSX) {
+	///plays the sound at sounds/`sound`.wav
+	private void playSound(string sound) {
+		executeShell("nohup afplay "~getcwd~"/sounds/"~sound~".wav");
+	}
 }
