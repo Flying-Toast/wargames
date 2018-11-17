@@ -45,7 +45,7 @@ class Cli {
 				typeText("HELP NOT AVAILABLE", "nohelp", 45);
 			} else if (line == "list games") {
 				writeln();
-				typeText("FALKENS MAZE", "falkensmaze", 45);
+				typeText("FALKEN'S MAZE", "falkensmaze", 45);
 				Thread.sleep(dur!"msecs"(1500));
 				typeText("BLACK JACK", "blackjack", 45);
 				Thread.sleep(dur!"msecs"(600));
