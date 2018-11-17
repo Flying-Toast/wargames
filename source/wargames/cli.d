@@ -28,6 +28,13 @@ class Cli {
 		}
 
 		clearScreen();
+		write("LOGON: ");
+		if (readln().replace("\n", "").toLower != "joshua") {
+			typeText("IDENTIFICATION NOT RECOGNIZED BY SYSTEM", "terminated", 35);
+			typeText("--CONNECTION TERMINATED--", "", 25);
+			return;
+		}
+
 		foreach (command; commands) {
 			while ((!command.sleep && command.trigger != "") && (readln().replace("\n", "").toLower.indexOf(command.trigger) == -1)) {}
 

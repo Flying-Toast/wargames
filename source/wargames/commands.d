@@ -23,9 +23,7 @@ immutable struct Command {
 }
 
 Command[] commands = [
-	Command("", "LOGON:", "", 0),
-	Command("joshua", "", "", 0),
-	Command("", "GREETINGS PROFESSOR FALKEN.", "greetings", 50),
+	Command("", "GREETINGS PROFESSOR FALKEN.", "greetingsProfessor", 50),
 	Command("hello", "HOW ARE YOU FEELING TODAY?", "howAreYou", 45),
 	Command("how are you", "EXCELLENT. IT'S BEEN A LONG TIME.", "explain", 45),
 	Command("", "CAN YOU EXPLAIN THE REMOVAL OF YOUR USER ACCOUNT ON JUNE 23, 1973?", "", 45),
