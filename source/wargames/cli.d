@@ -13,7 +13,7 @@ class Cli {
 	Color bg;
 
 	this() {
-		fg = new Color(90, 204, 179);
+		fg = new Color(132, 217, 236);
 		bg = new Color;
 	}
 
@@ -23,6 +23,10 @@ class Cli {
 	}
 
 	void runCli() {
+		scope (exit) {
+			writeln(escape); //clear terminal colors.
+		}
+
 		clearScreen();
 		foreach (command; commands) {
 			while ((!command.sleep && command.trigger != "") && (readln().replace("\n", "").toLower.indexOf(command.trigger) == -1)) {}
